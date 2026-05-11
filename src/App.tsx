@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Portfolio from './components/Portfolio'
 import './App.css'
 
