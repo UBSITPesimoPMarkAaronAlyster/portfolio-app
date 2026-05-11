@@ -1,0 +1,52 @@
+1. Create a React Project
+npm create vite@latest UNIT1_LESSON1_A_[YourLastName] -- --template react-ts
+
+- React
+- Typescript
+
+2. Go inside the folder
+cd PRACTICE_APTECH
+- code .
+- npm install
+- npm run dev
+
+3. Go to GitHub and create a repository
+
+4. In VS code terminal, Initialize git
+- git init
+
+git config --global user.name "Mark Aaron Alyster Pesimo"
+git config --global user.email "your-email@gmail.com"
+
+git add .
+git commit -m "Initial commit"
+
+git branch -M main
+git remote add origin https://github.com/UBSITPesimoPMarkAaronAlyster/PRACTICE_APTECH.git
+git push -u origin main
+
+5. in cmd
+npm install --save-dev gh-pages
+
+6. Edit vite.config.ts
+add: base: '/PRACTICE_APTECH/',
+
+7. Edit package.json
+add in scripts: "predeploy": "npm run build",
+                "deploy": "gh-pages -d dist"
+
+8. Build and Deploy in cmd
+- npm run build
+- npm run deploy
+
+9. whenever you are going to edit anything, do this in VS code terminal
+- git add .
+- git commit -m "Update resume"
+- git push origin main
+ 
+  in cmd
+- npm run deploy
+
+Install react router and bootstrap
+- npm install react-router-dom
+- npm install bootstrap
