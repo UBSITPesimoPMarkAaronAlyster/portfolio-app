@@ -3,9 +3,8 @@ import emailjs from "@emailjs/browser";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    employerName: "",
+    fromName: "",
     email: "",
-    company: "",
     message: "",
   });
 
@@ -25,9 +24,8 @@ const Contact: React.FC = () => {
       import.meta.env.VITE_EMAIL_SERVICE_ID,
       import.meta.env.VITE_EMAIL_TEMPLATE_ID,
       {
-        employer_name: formData.employerName,
-        employer_email: formData.email,
-        company: formData.company,
+        from_name: formData.fromName,
+        from_email: formData.email,
         message: formData.message,
       },
       import.meta.env.VITE_EMAIL_PUBLIC_KEY
@@ -36,9 +34,8 @@ const Contact: React.FC = () => {
     alert("Message sent successfully.");
 
     setFormData({
-      employerName: "",
+      fromName: "",
       email: "",
-      company: "",
       message: "",
     });
   };
@@ -53,9 +50,9 @@ const Contact: React.FC = () => {
         <form onSubmit={handleSubmit} className="contact-form container">
           <input
             type="text"
-            name="employerName"
+            name="fromName"
             placeholder="Employer Name"
-            value={formData.employerName}
+            value={formData.fromName}
             onChange={handleChange}
             required
           />
@@ -65,15 +62,6 @@ const Contact: React.FC = () => {
             name="email"
             placeholder="Employer Email"
             value={formData.email}
-            onChange={handleChange}
-            required
-          />
-
-          <input
-            type="text"
-            name="company"
-            placeholder="Company"
-            value={formData.company}
             onChange={handleChange}
             required
           />
